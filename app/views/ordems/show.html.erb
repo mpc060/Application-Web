@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @ordem.data %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @ordem.cliente %>
+</p>
+
+<p>
+  <strong>Relato:</strong>
+  <%= @ordem.relato %>
+</p>
+
+<p>
+  <strong>Colaborador:</strong>
+  <%= @ordem.colaborador %>
+</p>
+
+<p>
+  <strong>Resultado:</strong>
+  <%= @ordem.resultado %>
+</p>
+
+<%= link_to 'Edit', edit_ordem_path(@ordem) %> |
+<%= link_to 'Back', ordems_path %>

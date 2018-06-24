@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ordems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Cliente</th>
+      <th>Relato</th>
+      <th>Colaborador</th>
+      <th>Resultado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ordems.each do |ordem| %>
+      <tr>
+        <td><%= ordem.data %></td>
+        <td><%= ordem.cliente %></td>
+        <td><%= ordem.relato %></td>
+        <td><%= ordem.colaborador %></td>
+        <td><%= ordem.resultado %></td>
+        <td><%= link_to 'Show', ordem %></td>
+        <td><%= link_to 'Edit', edit_ordem_path(ordem) %></td>
+        <td><%= link_to 'Destroy', ordem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ordem', new_ordem_path %>
